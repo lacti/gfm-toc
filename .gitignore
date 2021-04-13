@@ -2,4 +2,3 @@ node_modules
 yarn*.log*
 *.swp
 /gfm-toc*
-/.webpack
