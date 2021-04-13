@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     libraryTarget: "commonjs",
-    path: path.join(__dirname, ".webpack"),
+    path: path.join(__dirname, "dist"),
     filename: "[name].js",
   },
   target: "node",
@@ -32,7 +32,7 @@ module.exports = {
         exclude: [
           [
             path.resolve(__dirname, "node_modules"),
-            path.resolve(__dirname, ".webpack"),
+            path.resolve(__dirname, "dist"),
           ],
         ],
         options: {

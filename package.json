@@ -2,7 +2,7 @@
   "name": "gfm-toc",
   "description": "Generate TOC.md from repository",
   "version": "1.0.0",
-  "main": "dist/main.js",
+  "main": "cli.js",
   "license": "MIT",
   "author": {
     "name": "jaeyoung.choi",
@@ -11,11 +11,14 @@
   "scripts": {
     "start": "ts-node src/main.ts",
     "build": "webpack",
-    "prebuild": "rm -rf .webpack",
+    "prebuild": "rm -rf dist",
     "pkg:all": "yarn pkg:linux && yarn pkg:win && yarn pkg:mac",
-    "pkg:linux": "pkg -t node14-linux .webpack/main.js -o gfm-toc",
-    "pkg:win": "pkg -t node14-win .webpack/main.js -o gfm-toc.exe",
-    "pkg:mac": "pkg -t node14-macos .webpack/main.js -o gfm-toc-mac"
+    "pkg:linux": "pkg -t node14-linux dist/main.js -o gfm-toc",
+    "pkg:win": "pkg -t node14-win dist/main.js -o gfm-toc.exe",
+    "pkg:mac": "pkg -t node14-macos dist/main.js -o gfm-toc-mac"
+  },
+  "bin": {
+    "gfm-toc": "./cli.js"
   },
   "dependencies": {
     "mdast-util-from-markdown": "^0.8.5",

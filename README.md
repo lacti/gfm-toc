@@ -5,7 +5,22 @@ Generate `TOC.md` file from all Markdown files in repository.
 ## Usage
 
 ```bash
-$ gfm-toc repository-dir
+gfm-toc target-dir
+```
+
+## Installation
+
+```bash
+npm i -g gfm-toc
+# Run gfm-toc
+```
+
+Or build from source.
+
+```bash
+npm
+npm run build
+# ./cli.js target-dir
 ```
 
 ## Example
@@ -21,7 +36,7 @@ See [`example`](example) directory. The input is like this,
     └── README.md
 ```
 
-then generate `TOC.md` like that.
+then generate `TOC.md` like that,
 
 ```markdown
 # Table of contents
@@ -34,6 +49,12 @@ then generate `TOC.md` like that.
   - [Sub secondary](subdir/README.md#sub-secondary)
   - [Friend](subdir/FRIEND.md#friend)
     - [Good to see you](subdir/FRIEND.md#good-to-see-you)
+```
+
+when executing this command.
+
+```bash
+gfm-toc example
 ```
 
 ## License
