@@ -1,0 +1,7 @@
+**
+!/cli.js
+!/dist/main.*
+!/README.md
+!/package.json
+!/package-lock.json
+

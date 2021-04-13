@@ -1,7 +1,7 @@
 {
   "name": "gfm-toc",
   "description": "Generate TOC.md from repository",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "cli.js",
   "license": "MIT",
   "author": {
